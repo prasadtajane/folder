@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/app$app.coverage" NAME="app Coverage Results" MODIFIED="1512886652380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$app.coverage" NAME="app Coverage Results" MODIFIED="1512887113076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="139" column="29" lean-forward="false" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
+            <state relative-caret-position="321">
+              <caret line="374" column="45" lean-forward="false" selection-start-line="374" selection-start-column="27" selection-end-line="374" selection-end-column="45" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <marker date="1512885716000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
@@ -85,8 +85,8 @@
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="58" column="26" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="187">
+              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
       <file leaf-file-name="find_courses.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/find_courses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="66" column="87" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="87" />
+            <state relative-caret-position="191">
+              <caret line="92" column="17" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -130,6 +130,9 @@
       <find>interest</find>
       <find>inter</find>
       <find>/interest/</find>
+      <find>star</find>
+      <find>topic</find>
+      <find>/browse/</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -598,16 +601,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/find_courses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="66" column="87" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="87" />
+        <state relative-caret-position="191">
+          <caret line="92" column="17" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="139" column="29" lean-forward="false" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
+        <state relative-caret-position="321">
+          <caret line="374" column="45" lean-forward="false" selection-start-line="374" selection-start-column="27" selection-end-line="374" selection-end-column="45" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <marker date="1512885716000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
@@ -668,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="58" column="26" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="58" selection-end-column="26" />
+        <state relative-caret-position="187">
+          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding />
         </state>
       </provider>

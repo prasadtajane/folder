@@ -52,8 +52,8 @@
 
                     <div class="col-md-1 center">
                         <form action ="/admin/{{ user['userId'] }}"  method="POST">
-                            <a class="navbar-link">
-                                <span class="glyphicon glyphicon-ok"></span>
+                            <a class="update">
+                                <span class="glyphicon glyphicon-ok navbar-link"></span>
                             </a>
                         </form>
                     </div>
@@ -71,4 +71,12 @@
         {% endif %}
       </div>
   </div>
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".update").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
 {% endblock %}
