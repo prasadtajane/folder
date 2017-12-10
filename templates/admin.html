@@ -12,27 +12,56 @@
       				<div class="col-md-2">First Name</div>
       				<div class="col-md-2">Last Name</div>
         			<div class="col-md-2">Role</div>
-        			<div class="col-md-2">Action</div>
+        			<div class="col-md-1">Update</div>
+        			<div class="col-md-1">Delete</div>
       			</div>
   	    		{% for user in users %}
-              <div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
-                <div class="col-md-4">{{ user['email'] }}</div>
-                <div class="col-md-2">{{ user['fname'] }}</div>
-                <div class="col-md-2">{{ user['lname'] }}</div>
-                <div class="col-md-2">
-                  <select class="form-control">
-                      value = {{ user['role'] }}
-                    <option value="admin">Admin</option>
-                    <option value="faculty">Faculty</option>
-                    <option value="student">Student</option>
-                  </select>
-                </div>
-                <div class="col-md-2">
-                  <input class="btn btn-default btn-primary btn-block"
-                      type="button"
-                      value="Update">
-                </div>
-              </div>
+                    <div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+                    <div class="col-md-4">{{ user['email'] }}</div>
+                    <div class="col-md-2">{{ user['fname'] }}</div>
+                    <div class="col-md-2">{{ user['lname'] }}</div>
+                    <div class="col-md-2">
+                      <select class="form-control" >
+
+                          <option value="admin"
+                                  {% if 'admin' == user.role %}
+                                  selected="selected"
+                                  {% endif %}>
+                              Admin
+                          </option>
+                          <option value="faculty"
+                                  {% if 'faculty' == user.role %}
+                                  selected="selected"
+                                  {% endif %}>
+                              Faculty
+                          </option>
+                          <option value="student"
+                                  {% if 'student' == user.role %}
+                                  selected="selected"
+                                  {% endif %}>
+                              Student
+                          </option>
+
+                      </select>
+                    </div>
+                    {#<div class="col-md-2">
+                      <input class="btn btn-default btn-primary btn-block"
+                          type="button"
+                          value="Update">
+                    </div>#}
+
+                    <div class="col-md-1 center">
+                        <a   class="navbar-link pull-right">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-1 center">
+                        <a   class="navbar-link pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </div>
+
+                    </div>
             {% endfor %}
           </div>
         {% else %}

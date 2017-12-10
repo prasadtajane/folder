@@ -105,11 +105,12 @@ def sign_in():
     return render_template("sign_in.html", form=form)
 
 
-
 @app.route("/admin")
 @requires_roles('admin')
 def admin():
     users=[]
+    # distinctRoles = ['admin', 'facutly', 'student']
+    # users={result=[], distinctRoles=[]}
     connection = get_db_connection()
 
     with connection.cursor() as cursor:
@@ -117,6 +118,7 @@ def admin():
                'ORDER BY User.email DESC;')
         cursor.execute(sql, ())
         users = cursor.fetchall()
+
 
     return render_template("admin.html",
                            users=users)

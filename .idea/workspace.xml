@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/app$app.coverage" NAME="app Coverage Results" MODIFIED="1512877320420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$app.coverage" NAME="app Coverage Results" MODIFIED="1512881184652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -21,60 +21,60 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="118" column="31" lean-forward="true" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <marker date="1512877020000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
-                <marker date="1512877020000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
-                <marker date="1512877020000" expanded="true" signature="3816:3877" ph="SELECT * FRO... User" />
-                <marker date="1512877020000" expanded="true" signature="5238:5278" ph="SELECT * FRO... User" />
-                <marker date="1512877020000" expanded="true" signature="5777:5817" ph="SELECT max(U... " />
-                <marker date="1512877020000" expanded="true" signature="6138:6351" ph="INSERT INTO User... " />
-                <marker date="1512877020000" expanded="true" signature="7248:7511" ph="SELECT * FRO... Course" />
-                <marker date="1512877020000" expanded="true" signature="7626:8461" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="8583:9191" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="9307:9336" ph="SELECT * FRO... SecondaryCourse" />
-                <marker date="1512877020000" expanded="true" signature="10435:10476" ph="SELECT * FRO... Course" />
-                <marker date="1512877020000" expanded="true" signature="10588:10693" ph="SELECT * FRO... CourseMaterial" />
-                <marker date="1512877020000" expanded="true" signature="10801:11021" ph="SELECT * FRO... MaterialComplete" />
-                <marker date="1512877020000" expanded="true" signature="11342:11407" ph="SELECT * FRO... SecondaryCourse" />
-                <marker date="1512877020000" expanded="true" signature="11561:11673" ph="SELECT * FRO... EnrolledCourse" />
-                <marker date="1512877020000" expanded="true" signature="11850:11965" ph="SELECT * FRO... CourseCompleted" />
-                <marker date="1512877020000" expanded="true" signature="12803:12929" ph="SELECT Inter... InterestedCourse" />
-                <marker date="1512877020000" expanded="true" signature="13080:13109" ph="SELECT * FRO... SecondaryCourse" />
-                <marker date="1512877020000" expanded="true" signature="13831:14108" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="14929:15510" ph="SELECT Cours... CourseCompleted" />
-                <marker date="1512877020000" expanded="true" signature="15649:15942" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="16048:16088" ph="SELECT DISTI... Course" />
-                <marker date="1512877020000" expanded="true" signature="16048:16162" ph="SELECT DISTI... " />
-                <marker date="1512877020000" expanded="true" signature="16095:16162" ph="SELECT DISTI... SecondaryCourse" />
-                <marker date="1512877020000" expanded="true" signature="17280:17644" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="17811:18104" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="18910:19581" ph="SELECT Cours... Course" />
-                <marker date="1512877020000" expanded="true" signature="20264:20608" ph="SELECT DISTI... EnrolledCourse" />
-                <marker date="1512877020000" expanded="true" signature="21141:21278" ph="SELECT * FRO... InterestedCourse" />
-                <marker date="1512877020000" expanded="true" signature="21396:21517" ph="DELETE FROM " />
-                <marker date="1512877020000" expanded="true" signature="21618:21703" ph="INSERT INTO InterestedCourse... " />
-                <marker date="1512877020000" expanded="true" signature="22132:22241" ph="INSERT INTO EnrolledCourse... " />
-                <marker date="1512877020000" expanded="true" signature="22747:22840" ph="INSERT INTO MaterialComplete... " />
-                <marker date="1512877020000" expanded="true" signature="22928:23052" ph="SELECT Cours... CourseMaterial" />
-                <marker date="1512877020000" expanded="true" signature="23162:23426" ph="SELECT Mater... MaterialComplete" />
-                <marker date="1512877020000" expanded="true" signature="23663:23767" ph="INSERT INTO CourseCompleted... " />
-                <marker date="1512877020000" expanded="true" signature="24148:24290" ph="UPDATE Cours... " />
-                <marker date="1512877020000" expanded="true" signature="24957:25098" ph="SELECT * FRO... Course" />
-                <marker date="1512877020000" expanded="true" signature="25445:25540" ph="INSERT INTO CourseQuestion... " />
-                <marker date="1512877020000" expanded="true" signature="25850:25919" ph="INSERT INTO QuestionMaterial... " />
-                <marker date="1512877020000" expanded="true" signature="26705:26768" ph="SELECT * FRO... CourseQuestion" />
-                <marker date="1512877020000" expanded="true" signature="26872:26913" ph="SELECT * FRO... Course" />
-                <marker date="1512877020000" expanded="true" signature="27015:27081" ph="SELECT quest... QuestionLike" />
-                <marker date="1512877020000" expanded="true" signature="27238:27527" ph="SELECT * FRO... QuestionMaterial" />
-                <marker date="1512877020000" expanded="true" signature="28715:28804" ph="UPDATE Cours... " />
-                <marker date="1512877020000" expanded="true" signature="29245:29306" ph="INSERT INTO QuestionLike... " />
-                <marker date="1512877020000" expanded="true" signature="29727:29789" ph="DELETE FROM " />
-                <marker date="1512877020000" expanded="true" signature="30213:30274" ph="UPDATE Cours... " />
-                <marker date="1512877020000" expanded="true" signature="30642:31097" ph="SELECT Cours... CourseQuestion" />
-                <marker date="1512877020000" expanded="true" signature="31229:31728" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
+                <marker date="1512881181000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
+                <marker date="1512881181000" expanded="true" signature="3911:3972" ph="SELECT * FRO... User" />
+                <marker date="1512881181000" expanded="true" signature="5334:5374" ph="SELECT * FRO... User" />
+                <marker date="1512881181000" expanded="true" signature="5873:5913" ph="SELECT max(U... " />
+                <marker date="1512881181000" expanded="true" signature="6234:6447" ph="INSERT INTO User... " />
+                <marker date="1512881181000" expanded="true" signature="7344:7607" ph="SELECT * FRO... Course" />
+                <marker date="1512881181000" expanded="true" signature="7722:8557" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="8679:9287" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="9403:9432" ph="SELECT * FRO... SecondaryCourse" />
+                <marker date="1512881181000" expanded="true" signature="10531:10572" ph="SELECT * FRO... Course" />
+                <marker date="1512881181000" expanded="true" signature="10684:10789" ph="SELECT * FRO... CourseMaterial" />
+                <marker date="1512881181000" expanded="true" signature="10897:11117" ph="SELECT * FRO... MaterialComplete" />
+                <marker date="1512881181000" expanded="true" signature="11438:11503" ph="SELECT * FRO... SecondaryCourse" />
+                <marker date="1512881181000" expanded="true" signature="11657:11769" ph="SELECT * FRO... EnrolledCourse" />
+                <marker date="1512881181000" expanded="true" signature="11946:12061" ph="SELECT * FRO... CourseCompleted" />
+                <marker date="1512881181000" expanded="true" signature="12899:13025" ph="SELECT Inter... InterestedCourse" />
+                <marker date="1512881181000" expanded="true" signature="13176:13205" ph="SELECT * FRO... SecondaryCourse" />
+                <marker date="1512881181000" expanded="true" signature="13927:14204" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="15025:15606" ph="SELECT Cours... CourseCompleted" />
+                <marker date="1512881181000" expanded="true" signature="15745:16038" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="16144:16184" ph="SELECT DISTI... Course" />
+                <marker date="1512881181000" expanded="true" signature="16144:16258" ph="SELECT DISTI... " />
+                <marker date="1512881181000" expanded="true" signature="16191:16258" ph="SELECT DISTI... SecondaryCourse" />
+                <marker date="1512881181000" expanded="true" signature="17376:17740" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="17907:18200" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="19006:19677" ph="SELECT Cours... Course" />
+                <marker date="1512881181000" expanded="true" signature="20360:20704" ph="SELECT DISTI... EnrolledCourse" />
+                <marker date="1512881181000" expanded="true" signature="21237:21374" ph="SELECT * FRO... InterestedCourse" />
+                <marker date="1512881181000" expanded="true" signature="21492:21613" ph="DELETE FROM " />
+                <marker date="1512881181000" expanded="true" signature="21714:21799" ph="INSERT INTO InterestedCourse... " />
+                <marker date="1512881181000" expanded="true" signature="22228:22337" ph="INSERT INTO EnrolledCourse... " />
+                <marker date="1512881181000" expanded="true" signature="22843:22936" ph="INSERT INTO MaterialComplete... " />
+                <marker date="1512881181000" expanded="true" signature="23024:23148" ph="SELECT Cours... CourseMaterial" />
+                <marker date="1512881181000" expanded="true" signature="23258:23522" ph="SELECT Mater... MaterialComplete" />
+                <marker date="1512881181000" expanded="true" signature="23759:23863" ph="INSERT INTO CourseCompleted... " />
+                <marker date="1512881181000" expanded="true" signature="24244:24386" ph="UPDATE Cours... " />
+                <marker date="1512881181000" expanded="true" signature="25053:25194" ph="SELECT * FRO... Course" />
+                <marker date="1512881181000" expanded="true" signature="25541:25636" ph="INSERT INTO CourseQuestion... " />
+                <marker date="1512881181000" expanded="true" signature="25946:26015" ph="INSERT INTO QuestionMaterial... " />
+                <marker date="1512881181000" expanded="true" signature="26801:26864" ph="SELECT * FRO... CourseQuestion" />
+                <marker date="1512881181000" expanded="true" signature="26968:27009" ph="SELECT * FRO... Course" />
+                <marker date="1512881181000" expanded="true" signature="27111:27177" ph="SELECT quest... QuestionLike" />
+                <marker date="1512881181000" expanded="true" signature="27334:27623" ph="SELECT * FRO... QuestionMaterial" />
+                <marker date="1512881181000" expanded="true" signature="28811:28900" ph="UPDATE Cours... " />
+                <marker date="1512881181000" expanded="true" signature="29341:29402" ph="INSERT INTO QuestionLike... " />
+                <marker date="1512881181000" expanded="true" signature="29823:29885" ph="DELETE FROM " />
+                <marker date="1512881181000" expanded="true" signature="30309:30370" ph="UPDATE Cours... " />
+                <marker date="1512881181000" expanded="true" signature="30738:31193" ph="SELECT Cours... CourseQuestion" />
+                <marker date="1512881181000" expanded="true" signature="31325:31824" ph="SELECT Cours... Course" />
               </folding>
             </state>
           </provider>
@@ -83,8 +83,18 @@
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="232">
+              <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,6 +108,12 @@
         <option value="Flask Main" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class</find>
+      <find>admin(</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -483,124 +499,132 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <marker date="1512877020000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="3816:3877" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="5238:5278" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="5777:5817" ph="SELECT max(U... " />
-            <marker date="1512877020000" expanded="true" signature="6138:6351" ph="INSERT INTO User... " />
-            <marker date="1512877020000" expanded="true" signature="7248:7511" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="7626:8461" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="8583:9191" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="9307:9336" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="10435:10476" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="10588:10693" ph="SELECT * FRO... CourseMaterial" />
-            <marker date="1512877020000" expanded="true" signature="10801:11021" ph="SELECT * FRO... MaterialComplete" />
-            <marker date="1512877020000" expanded="true" signature="11342:11407" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="11561:11673" ph="SELECT * FRO... EnrolledCourse" />
-            <marker date="1512877020000" expanded="true" signature="11850:11965" ph="SELECT * FRO... CourseCompleted" />
-            <marker date="1512877020000" expanded="true" signature="12803:12929" ph="SELECT Inter... InterestedCourse" />
-            <marker date="1512877020000" expanded="true" signature="13080:13109" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="13831:14108" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="14929:15510" ph="SELECT Cours... CourseCompleted" />
-            <marker date="1512877020000" expanded="true" signature="15649:15942" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="16048:16088" ph="SELECT DISTI... Course" />
-            <marker date="1512877020000" expanded="true" signature="16048:16162" ph="SELECT DISTI... " />
-            <marker date="1512877020000" expanded="true" signature="16095:16162" ph="SELECT DISTI... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="17280:17644" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="17811:18104" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="18910:19581" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="20264:20608" ph="SELECT DISTI... EnrolledCourse" />
-            <marker date="1512877020000" expanded="true" signature="21141:21278" ph="SELECT * FRO... InterestedCourse" />
-            <marker date="1512877020000" expanded="true" signature="21396:21517" ph="DELETE FROM " />
-            <marker date="1512877020000" expanded="true" signature="21618:21703" ph="INSERT INTO InterestedCourse... " />
-            <marker date="1512877020000" expanded="true" signature="22132:22241" ph="INSERT INTO EnrolledCourse... " />
-            <marker date="1512877020000" expanded="true" signature="22747:22840" ph="INSERT INTO MaterialComplete... " />
-            <marker date="1512877020000" expanded="true" signature="22928:23052" ph="SELECT Cours... CourseMaterial" />
-            <marker date="1512877020000" expanded="true" signature="23162:23426" ph="SELECT Mater... MaterialComplete" />
-            <marker date="1512877020000" expanded="true" signature="23663:23767" ph="INSERT INTO CourseCompleted... " />
-            <marker date="1512877020000" expanded="true" signature="24148:24290" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="24957:25098" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="25445:25540" ph="INSERT INTO CourseQuestion... " />
-            <marker date="1512877020000" expanded="true" signature="25850:25919" ph="INSERT INTO QuestionMaterial... " />
-            <marker date="1512877020000" expanded="true" signature="26705:26768" ph="SELECT * FRO... CourseQuestion" />
-            <marker date="1512877020000" expanded="true" signature="26872:26913" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="27015:27081" ph="SELECT quest... QuestionLike" />
-            <marker date="1512877020000" expanded="true" signature="27238:27527" ph="SELECT * FRO... QuestionMaterial" />
-            <marker date="1512877020000" expanded="true" signature="28715:28804" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="29245:29306" ph="INSERT INTO QuestionLike... " />
-            <marker date="1512877020000" expanded="true" signature="29727:29789" ph="DELETE FROM " />
-            <marker date="1512877020000" expanded="true" signature="30213:30274" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="30642:31097" ph="SELECT Cours... CourseQuestion" />
-            <marker date="1512877020000" expanded="true" signature="31229:31728" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="3911:3972" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="5334:5374" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="5873:5913" ph="SELECT max(U... " />
+            <marker date="1512881181000" expanded="true" signature="6234:6447" ph="INSERT INTO User... " />
+            <marker date="1512881181000" expanded="true" signature="7344:7607" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="7722:8557" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="8679:9287" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="9403:9432" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="10531:10572" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="10684:10789" ph="SELECT * FRO... CourseMaterial" />
+            <marker date="1512881181000" expanded="true" signature="10897:11117" ph="SELECT * FRO... MaterialComplete" />
+            <marker date="1512881181000" expanded="true" signature="11438:11503" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="11657:11769" ph="SELECT * FRO... EnrolledCourse" />
+            <marker date="1512881181000" expanded="true" signature="11946:12061" ph="SELECT * FRO... CourseCompleted" />
+            <marker date="1512881181000" expanded="true" signature="12899:13025" ph="SELECT Inter... InterestedCourse" />
+            <marker date="1512881181000" expanded="true" signature="13176:13205" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="13927:14204" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="15025:15606" ph="SELECT Cours... CourseCompleted" />
+            <marker date="1512881181000" expanded="true" signature="15745:16038" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="16144:16184" ph="SELECT DISTI... Course" />
+            <marker date="1512881181000" expanded="true" signature="16144:16258" ph="SELECT DISTI... " />
+            <marker date="1512881181000" expanded="true" signature="16191:16258" ph="SELECT DISTI... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="17376:17740" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="17907:18200" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="19006:19677" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="20360:20704" ph="SELECT DISTI... EnrolledCourse" />
+            <marker date="1512881181000" expanded="true" signature="21237:21374" ph="SELECT * FRO... InterestedCourse" />
+            <marker date="1512881181000" expanded="true" signature="21492:21613" ph="DELETE FROM " />
+            <marker date="1512881181000" expanded="true" signature="21714:21799" ph="INSERT INTO InterestedCourse... " />
+            <marker date="1512881181000" expanded="true" signature="22228:22337" ph="INSERT INTO EnrolledCourse... " />
+            <marker date="1512881181000" expanded="true" signature="22843:22936" ph="INSERT INTO MaterialComplete... " />
+            <marker date="1512881181000" expanded="true" signature="23024:23148" ph="SELECT Cours... CourseMaterial" />
+            <marker date="1512881181000" expanded="true" signature="23258:23522" ph="SELECT Mater... MaterialComplete" />
+            <marker date="1512881181000" expanded="true" signature="23759:23863" ph="INSERT INTO CourseCompleted... " />
+            <marker date="1512881181000" expanded="true" signature="24244:24386" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="25053:25194" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="25541:25636" ph="INSERT INTO CourseQuestion... " />
+            <marker date="1512881181000" expanded="true" signature="25946:26015" ph="INSERT INTO QuestionMaterial... " />
+            <marker date="1512881181000" expanded="true" signature="26801:26864" ph="SELECT * FRO... CourseQuestion" />
+            <marker date="1512881181000" expanded="true" signature="26968:27009" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="27111:27177" ph="SELECT quest... QuestionLike" />
+            <marker date="1512881181000" expanded="true" signature="27334:27623" ph="SELECT * FRO... QuestionMaterial" />
+            <marker date="1512881181000" expanded="true" signature="28811:28900" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="29341:29402" ph="INSERT INTO QuestionLike... " />
+            <marker date="1512881181000" expanded="true" signature="29823:29885" ph="DELETE FROM " />
+            <marker date="1512881181000" expanded="true" signature="30309:30370" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="30738:31193" ph="SELECT Cours... CourseQuestion" />
+            <marker date="1512881181000" expanded="true" signature="31325:31824" ph="SELECT Cours... Course" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="118" column="31" lean-forward="true" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <marker date="1512877020000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="3816:3877" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="5238:5278" ph="SELECT * FRO... User" />
-            <marker date="1512877020000" expanded="true" signature="5777:5817" ph="SELECT max(U... " />
-            <marker date="1512877020000" expanded="true" signature="6138:6351" ph="INSERT INTO User... " />
-            <marker date="1512877020000" expanded="true" signature="7248:7511" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="7626:8461" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="8583:9191" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="9307:9336" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="10435:10476" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="10588:10693" ph="SELECT * FRO... CourseMaterial" />
-            <marker date="1512877020000" expanded="true" signature="10801:11021" ph="SELECT * FRO... MaterialComplete" />
-            <marker date="1512877020000" expanded="true" signature="11342:11407" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="11561:11673" ph="SELECT * FRO... EnrolledCourse" />
-            <marker date="1512877020000" expanded="true" signature="11850:11965" ph="SELECT * FRO... CourseCompleted" />
-            <marker date="1512877020000" expanded="true" signature="12803:12929" ph="SELECT Inter... InterestedCourse" />
-            <marker date="1512877020000" expanded="true" signature="13080:13109" ph="SELECT * FRO... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="13831:14108" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="14929:15510" ph="SELECT Cours... CourseCompleted" />
-            <marker date="1512877020000" expanded="true" signature="15649:15942" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="16048:16088" ph="SELECT DISTI... Course" />
-            <marker date="1512877020000" expanded="true" signature="16048:16162" ph="SELECT DISTI... " />
-            <marker date="1512877020000" expanded="true" signature="16095:16162" ph="SELECT DISTI... SecondaryCourse" />
-            <marker date="1512877020000" expanded="true" signature="17280:17644" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="17811:18104" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="18910:19581" ph="SELECT Cours... Course" />
-            <marker date="1512877020000" expanded="true" signature="20264:20608" ph="SELECT DISTI... EnrolledCourse" />
-            <marker date="1512877020000" expanded="true" signature="21141:21278" ph="SELECT * FRO... InterestedCourse" />
-            <marker date="1512877020000" expanded="true" signature="21396:21517" ph="DELETE FROM " />
-            <marker date="1512877020000" expanded="true" signature="21618:21703" ph="INSERT INTO InterestedCourse... " />
-            <marker date="1512877020000" expanded="true" signature="22132:22241" ph="INSERT INTO EnrolledCourse... " />
-            <marker date="1512877020000" expanded="true" signature="22747:22840" ph="INSERT INTO MaterialComplete... " />
-            <marker date="1512877020000" expanded="true" signature="22928:23052" ph="SELECT Cours... CourseMaterial" />
-            <marker date="1512877020000" expanded="true" signature="23162:23426" ph="SELECT Mater... MaterialComplete" />
-            <marker date="1512877020000" expanded="true" signature="23663:23767" ph="INSERT INTO CourseCompleted... " />
-            <marker date="1512877020000" expanded="true" signature="24148:24290" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="24957:25098" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="25445:25540" ph="INSERT INTO CourseQuestion... " />
-            <marker date="1512877020000" expanded="true" signature="25850:25919" ph="INSERT INTO QuestionMaterial... " />
-            <marker date="1512877020000" expanded="true" signature="26705:26768" ph="SELECT * FRO... CourseQuestion" />
-            <marker date="1512877020000" expanded="true" signature="26872:26913" ph="SELECT * FRO... Course" />
-            <marker date="1512877020000" expanded="true" signature="27015:27081" ph="SELECT quest... QuestionLike" />
-            <marker date="1512877020000" expanded="true" signature="27238:27527" ph="SELECT * FRO... QuestionMaterial" />
-            <marker date="1512877020000" expanded="true" signature="28715:28804" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="29245:29306" ph="INSERT INTO QuestionLike... " />
-            <marker date="1512877020000" expanded="true" signature="29727:29789" ph="DELETE FROM " />
-            <marker date="1512877020000" expanded="true" signature="30213:30274" ph="UPDATE Cours... " />
-            <marker date="1512877020000" expanded="true" signature="30642:31097" ph="SELECT Cours... CourseQuestion" />
-            <marker date="1512877020000" expanded="true" signature="31229:31728" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="1712:1930" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="3017:3052" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="3911:3972" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="5334:5374" ph="SELECT * FRO... User" />
+            <marker date="1512881181000" expanded="true" signature="5873:5913" ph="SELECT max(U... " />
+            <marker date="1512881181000" expanded="true" signature="6234:6447" ph="INSERT INTO User... " />
+            <marker date="1512881181000" expanded="true" signature="7344:7607" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="7722:8557" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="8679:9287" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="9403:9432" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="10531:10572" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="10684:10789" ph="SELECT * FRO... CourseMaterial" />
+            <marker date="1512881181000" expanded="true" signature="10897:11117" ph="SELECT * FRO... MaterialComplete" />
+            <marker date="1512881181000" expanded="true" signature="11438:11503" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="11657:11769" ph="SELECT * FRO... EnrolledCourse" />
+            <marker date="1512881181000" expanded="true" signature="11946:12061" ph="SELECT * FRO... CourseCompleted" />
+            <marker date="1512881181000" expanded="true" signature="12899:13025" ph="SELECT Inter... InterestedCourse" />
+            <marker date="1512881181000" expanded="true" signature="13176:13205" ph="SELECT * FRO... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="13927:14204" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="15025:15606" ph="SELECT Cours... CourseCompleted" />
+            <marker date="1512881181000" expanded="true" signature="15745:16038" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="16144:16184" ph="SELECT DISTI... Course" />
+            <marker date="1512881181000" expanded="true" signature="16144:16258" ph="SELECT DISTI... " />
+            <marker date="1512881181000" expanded="true" signature="16191:16258" ph="SELECT DISTI... SecondaryCourse" />
+            <marker date="1512881181000" expanded="true" signature="17376:17740" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="17907:18200" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="19006:19677" ph="SELECT Cours... Course" />
+            <marker date="1512881181000" expanded="true" signature="20360:20704" ph="SELECT DISTI... EnrolledCourse" />
+            <marker date="1512881181000" expanded="true" signature="21237:21374" ph="SELECT * FRO... InterestedCourse" />
+            <marker date="1512881181000" expanded="true" signature="21492:21613" ph="DELETE FROM " />
+            <marker date="1512881181000" expanded="true" signature="21714:21799" ph="INSERT INTO InterestedCourse... " />
+            <marker date="1512881181000" expanded="true" signature="22228:22337" ph="INSERT INTO EnrolledCourse... " />
+            <marker date="1512881181000" expanded="true" signature="22843:22936" ph="INSERT INTO MaterialComplete... " />
+            <marker date="1512881181000" expanded="true" signature="23024:23148" ph="SELECT Cours... CourseMaterial" />
+            <marker date="1512881181000" expanded="true" signature="23258:23522" ph="SELECT Mater... MaterialComplete" />
+            <marker date="1512881181000" expanded="true" signature="23759:23863" ph="INSERT INTO CourseCompleted... " />
+            <marker date="1512881181000" expanded="true" signature="24244:24386" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="25053:25194" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="25541:25636" ph="INSERT INTO CourseQuestion... " />
+            <marker date="1512881181000" expanded="true" signature="25946:26015" ph="INSERT INTO QuestionMaterial... " />
+            <marker date="1512881181000" expanded="true" signature="26801:26864" ph="SELECT * FRO... CourseQuestion" />
+            <marker date="1512881181000" expanded="true" signature="26968:27009" ph="SELECT * FRO... Course" />
+            <marker date="1512881181000" expanded="true" signature="27111:27177" ph="SELECT quest... QuestionLike" />
+            <marker date="1512881181000" expanded="true" signature="27334:27623" ph="SELECT * FRO... QuestionMaterial" />
+            <marker date="1512881181000" expanded="true" signature="28811:28900" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="29341:29402" ph="INSERT INTO QuestionLike... " />
+            <marker date="1512881181000" expanded="true" signature="29823:29885" ph="DELETE FROM " />
+            <marker date="1512881181000" expanded="true" signature="30309:30370" ph="UPDATE Cours... " />
+            <marker date="1512881181000" expanded="true" signature="30738:31193" ph="SELECT Cours... CourseQuestion" />
+            <marker date="1512881181000" expanded="true" signature="31325:31824" ph="SELECT Cours... Course" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="232">
+          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding />
         </state>
       </provider>
