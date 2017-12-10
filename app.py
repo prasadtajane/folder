@@ -119,10 +119,30 @@ def admin():
         cursor.execute(sql, ())
         users = cursor.fetchall()
 
-
     return render_template("admin.html",
                            users=users)
 
+@app.route("/admin/<string:user_id>/", methods=['POST'])
+@requires_roles('admin')
+def make_admin(user_id):
+    connection = get_db_connection()
+    admin = 'Admin'
+    #orig={}
+    with connection.cursor() as cursor:
+        sql = ('SELECT * '
+               'FROM User '
+               'WHERE User.userId =  %s;')
+        cursor.execute(sql, (user_id))
+        if len(cursor.fetchall()):
+            sql = ('INSERT INTO Administrator (adminId, role, adminGrantedBy) '
+                   'VALUES (%s, %s , %s);')
+            cursor.execute(sql, (user_id, admin, g.user['userId']))
+            print("adding :", user_id, admin, g.user['userId'])
+        else:
+            print("No user exists")
+        connection.commit()
+
+    return redirect(request.referrer)
 
 
 class SignUpForm(Form):

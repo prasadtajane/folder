@@ -51,12 +51,14 @@
                     </div>#}
 
                     <div class="col-md-1 center">
-                        <a   class="navbar-link pull-right">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </a>
+                        <form action ="/admin/{{ user['userId'] }}"  method="POST">
+                            <a class="navbar-link">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </a>
+                        </form>
                     </div>
                     <div class="col-md-1 center">
-                        <a   class="navbar-link pull-right">
+                        <a class="navbar-link pull-right">
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                     </div>
