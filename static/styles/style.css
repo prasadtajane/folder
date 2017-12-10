@@ -1,0 +1,115 @@
+.p-0{
+	padding: 0px;
+}
+
+.p-1{
+	padding: 5px;
+}
+
+.pb-1 {
+	padding-bottom: 5px;
+}
+
+.p-2{
+	padding: 10px;
+}
+
+.p-3{
+	padding: 15px;
+}
+
+.p-4{
+	padding: 20px;
+}
+
+.pt-6{
+	padding-top: 30px;
+}
+
+.m-0{
+	margin: 0px;
+}
+
+.m-1{
+	margin: 5px;
+}
+
+.m-2{
+	margin: 10px;
+}
+
+.m-3{
+	margin: 15px;
+}
+
+.m-4{
+	margin: 20px;
+}
+
+.mt-1 {
+	margin-top: 5px;
+}
+
+.mt-2 {
+	margin-top: 10px;
+}
+
+.mb-2 {
+	margin-bottom: 10px;
+}
+
+.mt-3 {
+	margin-top: 15px;
+}
+
+.mt-4 {
+	margin-top: 20px;
+}
+
+.xl-font {
+	font-size: x-large;
+}
+
+.gold {
+	color: gold;
+}
+
+.sign-in{
+	border: 3px solid #e7e7e7;
+	border-radius: 25px;
+}
+
+.sign-in-header{
+	border-bottom: 2px solid #e7e7e7;
+	text-align: center;
+}
+
+.underline{
+	border-bottom: 2px solid #e7e7e7;
+}
+
+.table-alt {
+	background-color: #f8f8f8;
+}
+
+.outline-gray {
+	border: 3px solid #e7e7e7;
+}
+
+.error {
+	color: red;
+}
+
+.ellipsize {
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.italic{
+	font-style: italic;
+}

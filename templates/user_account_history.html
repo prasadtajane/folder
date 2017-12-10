@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+	    <h2>Account History</h2>
+	    {% if courses %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-3">Course</div>
+    				<div class="col-md-2">Enrollment Date</div>
+    				<div class="col-md-2">Completion Date</div>
+    				<div class="col-md-2">Amount Paid</div>
+    				<div class="col-md-3">Confirmation Code</div>
+    			</div>
+    			{% set total = [0] %}
+	    		{% for course in courses %}
+	    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+	    				<div class="col-md-3"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+	    				<div class="col-md-2">{{ course['eDate'] }}</div>
+	    				<div class="col-md-2">{{ course['cDate'] }}</div>
+	    				<div class="col-md-2">{{ course['cost'] }}</div>
+	    				<div class="col-md-3">{{ course['code'] }}</div>
+	    			</div>
+	    			{% set _ = total.append(total.pop() + course['cost']|int) %}
+		    	{% endfor %}
+		    	<br>
+		    	<div class="row m-0 pb-1 underline">
+		    		<div class="col-md-3"><strong>GRAND TOTAL:</strong></div>
+		    		<div class="col-md-2"><strong></strong></div>
+		    		<div class="col-md-2"><strong></strong></div>
+		    		<div class="col-md-2"><strong>{{ total[0]}}</strong></div>
+		    	</div>
+		    </div>
+	    {% else %}
+	    	No history found associated with your account.
+	    {% endif %}
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".star").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}
+
+
+

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field_errors %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+	    <h2>{{course_info.name}}</h2>
+	</div>
+	<div class="row">
+	    <div>
+	    	<p>{{course_info.description}}</p>
+	    </div>
+	</div>
+
+	<div class="row">
+		<h2 >Questions</h2>
+		<div class="col-md-12">
+			{% for question in all_questions if question.visible or question.userId == g.user.userId or 'faculty' in g.user_roles %}
+					<div class="row mt-2">
+						<div class="h4 col-md-10 m-0 p-0">{{question.text}}</div>
+						<div class="col-md-2 col-md-offset-10 m-0 text-right">
+							{% if question.questionId in liked_question_ids %}
+								<form action="/unlike_question/{{course_info.id}}/{{question.questionId}}/" method="Post">
+									<span class="like-question-btn btn btn-link p-0">Unlike this question</span>
+								</form>
+							{% else %}
+								<form action="/like_question/{{course_info.id}}/{{question.questionId}}/" method="Post">
+									<span class="like-question-btn btn btn-link p-0">Like this question</span>
+								</form>
+							{% endif %}
+						</div>
+						<div>Related materials: {{ related_course_materials[question.questionId] }}</div>
+						{% if question.answer %}
+							<div>Instructor's Answer: <span class="italic">{{question.answer}}</div></span>
+						{% elif 'faculty' in g.user_roles %}
+							<form method="POST" action="/answer_question/{{course_info.id}}/{{question.questionId}}/">
+								{{ answer_question_form.answer(class="w-100") }}
+								{{ answer_question_form.submit(class="btn btn-sm btn-primary")}}
+							</form>
+						{% endif %}
+						{% if 'faculty' in g.user_roles %}
+							{% if question.visible %}
+								This question is visible to all students.
+							{% else %}
+								<form method="POST" action="/make_visible/{{course_info.id}}/{{question.questionId}}/">
+									<span class="make-visible-btn btn btn-link p-0">Make this question visible</span>
+								</form>
+							{% endif %}
+						{% endif %}
+					</div>
+			{% else %}
+				<div class="row mt-2">No questions have been asked yet.</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".like-question-btn").click(function(){
+			$(this).closest('form').submit();
+		});
+
+		$(".make-visible-btn").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}

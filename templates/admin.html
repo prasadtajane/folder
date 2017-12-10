@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>Inside admin</P>
+  <div class="col-md-10 col-md-offset-1">
+    	<div class="row">
+    	  <h2>Current Users</h2>
+        {% if users %}
+  	    	<div class="col-12 outline-gray">
+  	    		<div class="row m-0 pb-1 underline">
+      				<div class="col-md-4">Email</div>
+      				<div class="col-md-2">First Name</div>
+      				<div class="col-md-2">Last Name</div>
+        			<div class="col-md-2">Role</div>
+        			<div class="col-md-2">Action</div>
+      			</div>
+  	    		{% for user in users %}
+              <div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+                <div class="col-md-4">{{ user['email'] }}</div>
+                <div class="col-md-2">{{ user['fname'] }}</div>
+                <div class="col-md-2">{{ user['lname'] }}</div>
+                <div class="col-md-2">
+                  <select class="form-control">
+                      value = {{ user['role'] }}
+                    <option value="admin">Admin</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="student">Student</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <input class="btn btn-default btn-primary btn-block"
+                      type="button"
+                      value="Update">
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          System does not have users yet !
+        {% endif %}
+      </div>
+  </div>
+{% endblock %}

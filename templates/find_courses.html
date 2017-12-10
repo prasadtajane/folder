@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+		<div class="col-md-6 p-0"><h2>Courses</h2></div>
+		<div class="col-md-6 pt-6 text-right">
+			Search by: 
+				<a href="/browse/topic/">Topic</a> | 
+				<a href="/browse/comp_percent/">Completion Percentage </a> |
+				<a href="/browse/keyword/">Keyword</a>
+		</div>
+	</div>
+	{% if search_type and search_type in ("topic", "keyword") %}
+		<div class="row mt-2 mb-2">
+			{% if search_type == "topic" %}
+				<form action="/browse/topic">
+					Select topic: {{ topic_form.topic() }}
+				</form>
+			{% else %}
+				<form action="/browse/keyword">
+					Search: {{ keyword_form.keyword() }}
+					{{ keyword_form.submit(class="btn btn-sm btn-primary") }}
+				</form>
+			{% endif %}
+		</div> 
+	{% endif %}
+	<div class="row">
+	    {% if courses %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-2">Name</div>
+    				<div class="col-md-6">Description</div>
+    				<div class="col-md-2">Topic(s)</div>
+    				<div class="col-md-1">
+    					{% if search_type == 'percent' %}
+    						Percent Completed
+    					{% else %}
+    						Course Rating
+    					{% endif %}
+    				</div>
+    				<div class="col-md-1"></div>
+    			</div>
+	    		{% for course in courses %}
+		    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+		    				<div class="col-md-2"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+		    				<div class="col-md-6">{{ course['description'] }}</div>
+		    				<div class="col-md-2">
+		    					{{ course['primaryTopic'] }}{% for secondaryTopic in secondary_topics[course.id] %}, {{secondaryTopic}}{% endfor %}
+		    				</div>
+		    				<div class="col-md-1">
+		    					{% if search_type == 'percent' %}
+		    						{% if course['numEnrolled'] %}
+		    							{{ course['compPercent']}}
+		    						{% else %}
+		    							--
+		    						{% endif %}
+		    					{% else %}
+			    					{% if course['avgRating'] is none %}
+			    						--
+			    					{% else %}
+			    						{{ course['avgRating'] }}
+			    					{% endif %}
+			    				{% endif %}
+		    				</div>
+		    				<div class="col-md-1 xl-font text-center">
+		    					<form action ="/interest/{{course.id}}/" method="POST">
+		    						<span class="star">
+				    					{% if course['id'] in interested_courses %}
+				    						<span class="gold">&#9733;</span>
+				    					{% else %}
+				    						&#9734;
+				    					{% endif %}
+		    						</span>
+								</form>
+		    				</div>
+		    			</div>
+		    	{% endfor %}
+	    	</div>
+	    {% else %}
+	    	No courses available.
+	    {% endif %}
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".star").click(function(){
+			$(this).closest('form').submit();
+		});
+
+		$("#topic").change(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}
+
+
+

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+	    <h2>{{course_info.name}}</h2>
+	</div>
+	<div class="row">
+	    <div>
+	    	<p>{{course_info.description}}</p>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col-md-6 p-0">
+	    	Topic(s): {{course_info.primaryTopic}}{% for secondaryTopic in secondary_topics %}, {{secondaryTopic}}{% endfor %}
+	    </div>
+	    <div class="col-md-6">
+	    	<span class="pull-right">
+		    	{% if enrolled_info %}
+		    		Enrolled on: {{enrolled_info['date'].strftime('%Y-%m-%d')}}
+		    	{% else %}
+		    		<form action ="/enroll/{{course_info.id}}" method="POST">
+		    			<span class="btn btn-primary enroll-btn">Enroll</span>
+		    		</form>
+		    	{% endif %}
+		    </span>
+	    </div>
+	</div>
+	<div class="row">
+	    <a href="/questions/{{course_info.id}}/">Course Questions</a>
+	</div>
+
+	{% if completion_info %}
+		<div class="row">
+			<h3>Course Complete</h3>
+			<p> Congratulaitons! You completed this course on {{completion_info['date'].strftime('%Y-%m-%d')}}!
+			<div>
+				{% if completion_info['rating'] is not none %}
+					You rated this course: {{completion_info['rating']}}
+				{% else %}
+					<form action ="/rate/{{course_info.id}}/" method="POST">
+						Rate this course:
+						<select name="rating">
+							<option value="5">5</option>
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+						<input class="btn btn-xs btn-primary" type="submit" value="Submit">
+		    		</form>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+
+	<div class="row">
+	    <h3>Course Materials</h3>
+	    {% if course_materials %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-1">Order</div>
+    				<div class="col-md-3">Name</div>
+		    		<div class="col-md-3">Material Type</div>
+		    		<div class="col-md-2">View</div>
+		    		<div class="col-md-3">Completion Date</div>
+    			</div>
+	    		{% for material in course_materials %}
+		    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+		    				<div class="col-md-1">{{ material.materialOrder}}</div>
+		    				<div class="col-md-3">{{ material.materialName}}</div>
+		    				<div class="col-md-3">{{ material.materialType}}
+			    				{% if material.materialType == "File" %}
+			    					(Type: {{material.type}}, Size: {{material.size}})
+			    				{% endif %}
+		    				</div>
+		    				<div class="col-md-2">
+		    				{% if enrolled_info %}
+		    					{% if material.materialOrder <= next_material_to_complete %}
+				    				{% if material.materialType == "Link" %}
+				    					<a href="{{material.Url}}">Visit</a>
+				    				{% elif material.materialType == "Post" %}
+				    					<a>View</a>
+				    				{% elif material.materialType == "File" %}
+				    					<a href="{{ url_for('static',filename='images/download.jpeg') }}" download>{{material.path}}</a>
+				    				{% elif material.materialType == "Quiz" %}
+				    					<a>View</a>
+				    				{% endif %}
+				    			{% else %}
+				    			 	Not available yet.
+				    			{% endif %}
+			    			{% else %}
+			    				Must enroll for access.
+		    				{% endif %}
+		    				</div>
+		    				<div class="col-md-3">
+		    					{% if material.materialId in completed_ids %}
+		    						{{completed_ids[material.materialId]['date'].strftime('%Y-%m-%d')}}
+		    					{% elif material.materialOrder == next_material_to_complete and enrolled_info %}
+		    						<form action ="/complete_material/{{course_info.id}}/{{material.materialId}}/" method="POST">
+		    							<span class="btn btn-xs btn-primary mark-complete-btn">Mark complete</span>
+		    						</form>
+		    					{% else %}
+		    						--
+		    					{% endif %}
+		    				</div>
+		    			</div>
+		    	{% endfor %}
+	    	</div>
+	    {% else %}
+	    	No materials have been posted for this course.
+	    {% endif %}
+	    <p class="pt-1">Confused? <a href="/ask_question/{{course_info.id}}/">Ask a question.</a></p>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".enroll-btn").click(function(){
+			$(this).closest('form').submit();
+		});
+		$(".mark-complete-btn").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}

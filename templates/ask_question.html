@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field_errors %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+	    <h2>{{all_materials[0].name}}</h2>
+	</div>
+	<div class="row">
+	    <div>
+	    	<p>{{all_materials[0].description}}</p>
+	    </div>
+	</div>
+
+	<div class="row">
+		<form method="POST">
+			<h5>Ask your question:</h5>
+		    {{ form.question(class="w-100") }}
+		    {{ render_field_errors(form.question) }}
+		   <h5>Select any course materials this question applies to:</h5>
+		   	{{ form.materials(multiple=True) }}
+		   	<div>{{ form.submit(class="btn btn-primary mt-1") }}</div>
+	   	</form>
+	</div>
+
+</div>
+
+{% endblock %}

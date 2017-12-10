@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+	    <h2>Current Courses</h2>
+	    {% if current_courses %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-2">Name</div>
+    				<div class="col-md-6">Description</div>
+    				<div class="col-md-2">Topic(s)</div>
+    				<div class="col-md-1">Materials Remaining</div>
+    				<div class="col-md-1">Course Rating</div>
+    			</div>
+	    		{% for course in current_courses %}
+		    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+		    				<div class="col-md-2"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+		    				<div class="col-md-6">{{ course['description'] }}</div>
+		    				<div class="col-md-2">
+		    					{{ course['primaryTopic'] }}{% for secondaryTopic in secondary_topics[course.id] %}, {{secondaryTopic}}{% endfor %}
+		    				</div>
+		    				<div class="col-md-1">{{ course['materialsLeft'] }}</div>
+		    				<div class="col-md-1">
+		    					{% if course['avgRating'] is none %}
+		    						--
+		    					{% else %}
+		    						{{ course['avgRating'] }}
+		    					{% endif %}
+		    				</div>
+		    			</div>
+		    	{% endfor %}
+	    	</div>
+	    {% else %}
+	    	You are not currently enrolled in any courses.
+	    {% endif %}
+	</div>
+	<div class="row mt-2">
+	    <h2>Completed Courses</h2>
+	    {% if completed_courses %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-2">Name</div>
+		    		<div class="col-md-6">Description</div>
+		    		<div class="col-md-2">Topic(s)</div>
+		    		<div class="col-md-1">Completion Date</div>
+		    		<div class="col-md-1">My Rating</div>
+    			</div>
+	    		{% for course in completed_courses %}
+		    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+		    				<div class="col-md-2"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+		    				<div class="col-md-6">{{ course['description'] }}</div>
+		    				<div class="col-md-2">{{ course['primaryTopic'] }}{% for secondaryTopic in secondary_topics[course.id] %}, {{secondaryTopic}}{% endfor %}</div>
+		    				<div class="col-md-1">{{ course['date'].strftime('%Y-%m-%d') }}</div>
+		    				<div class="col-md-1">
+		    					{% if course['rating'] is none %}
+		    						--
+		    					{% else %}
+		    						{{ course['rating'] }}
+		    					{% endif %}
+		    				</div>
+		    			</div>
+		    	{% endfor %}
+	    	</div>
+	    {% else %}
+	    	You have not yet completed any courses.
+	    {% endif %}
+	</div>
+	<div class="row mt-2">
+	    <h2>Interested Courses</h2>
+	    {% if interested_courses %}
+	    	<div class="col-12 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-2">Name</div>
+		    		<div class="col-md-6">Description</div>
+		    		<div class="col-md-2">Topic(s)</div>
+		    		<div class="col-md-2">Course Rating</div>
+    			</div>
+	    		{% for course in interested_courses %}
+		    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+		    				<div class="col-md-2"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+		    				<div class="col-md-6">{{ course['description'] }}</div>
+		    				<div class="col-md-2">{{ course['primaryTopic'] }}{% for secondaryTopic in secondary_topics[course.id] %}, {{secondaryTopic}}{% endfor %}</div>
+		    				<div class="col-md-2">
+		    					{% if course['avgRating'] is none %}
+		    						--
+		    					{% else %}
+		    						{{ course['avgRating'] }}
+		    					{% endif %}
+		    				</div>
+		    			</div>
+		    	{% endfor %}
+	    	</div>
+	    {% else %}
+	    	You have not expressed interest in any courses.
+	    {% endif %}
+	</div>
+</div>
+{% endblock %}

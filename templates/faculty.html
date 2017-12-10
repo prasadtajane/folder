@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+		<h2>Courses Needing Attention</h2>
+	</div>
+	<div class="row">
+		{% if courses_needing_attention %}
+			<div class="col-md-6 p-0 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-6">Name</div>
+    				<div class="col-md-6">Unanswered Questions</div>
+    			</div>
+	    		{% for course in courses_needing_attention %}
+	    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+	    				<div class="col-md-6"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+	    				<div class="col-md-6">{{ course['questionCount'] }}</div>
+	    			</div>
+		    	{% endfor %}
+	    	</div>
+		{% else %}
+			No courses that require your attention.
+		{% endif %}
+	</div>
+
+	<div class="row">
+		<h2>All Courses</h2>
+	</div>
+	<div class="row">
+		{% if courses %}
+			<div class="col-md-8 p-0 outline-gray">
+	    		<div class="row m-0 pb-1 underline">
+    				<div class="col-md-4">Name</div>
+    				<div class="col-md-4">Enrolled</div>
+    				<div class="col-md-4">Completed</div>
+    			</div>
+	    		{% for course in courses %}
+	    			<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+	    				<div class="col-md-4"><a href="/course/{{course.id}}">{{ course['name'] }}</a></div>
+	    				<div class="col-md-4">{{ course['enrolledCount'] }}</div>
+	    				<div class="col-md-4">{{ course['completedCount'] }}</div>
+	    			</div>
+		    	{% endfor %}
+	    	</div>
+		{% else %}
+			No courses.
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

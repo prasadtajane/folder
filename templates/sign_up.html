@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field_errors %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 p-3">
+    	<div class="sign-in">
+    		<div class="sign-in-header">
+    			<h2>Welcome To Trainly.io!</h2>
+    		</div>
+    		<div class="sign-in-content p-2">
+    			<form method="POST">
+                    <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">First Name:</div>
+                            <div class="col-md-4">{{ form.first_name }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.first_name) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Last Name:</div>
+                            <div class="col-md-4">{{ form.last_name }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.last_name) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Phone Number:</div>
+                            <div class="col-md-4">{{ form.phone_number }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.phone_number) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Street:</div>
+                            <div class="col-md-4">{{ form.street }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.street) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">City:</div>
+                            <div class="col-md-4">{{ form.city }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.city) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Postal Code:</div>
+                            <div class="col-md-4">{{ form.postal_code }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.postal_code) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Country:</div>
+                            <div class="col-md-4">{{ form.country }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.country) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Profile Picture:</div>
+                            <div class="{% if form.profile_picture.errors %}col-md-4{% else %}col-md-8{% endif %} ellipsize">{{ form.profile_picture }}</div>
+                            {% if form.profile_picture.errors %}
+                                <div class="col-md-4">{{ render_field_errors(form.profile_picture) }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Email:</div>
+                            <div class="col-md-4">{{ form.email }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.email) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Password:</div>
+                            <div class="col-md-4">{{ form.password }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.password) }}</div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-md-4 text-right">Confirm Password:</div>
+                            <div class="col-md-4">{{ form.confirm }}</div>
+                            <div class="col-md-4">{{ render_field_errors(form.confirm) }}</div>
+                        </div>
+                        <div class="text-center">
+    					   <input class="btn btn-primary m-2" type="submit" value="Sign up">
+                        </div>
+                    </div>
+                    </div>
+				</form>
+    		</div>
+    	</div>
+    	<div class="mt-1">
+    		<p> Already have an account? Sign in <a href="/sign_in">here.</a></p>
+    	</div>
+    </div>
+</div>
+{% endblock %}
