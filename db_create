@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Restarting mysql server..." &&
+mysql.server restart &&
+echo "Creating Trainly.io Database..." &&
+mysql -u root < database/create_db.sql

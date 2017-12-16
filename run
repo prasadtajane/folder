@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Starting Flask application..." &&
+export FLASK_APP=app/app.py &&
+flask run

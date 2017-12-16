@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Restarting mysql server..." &&
+mysql.server restart &&
+echo "Creating Trainly.io Database..." &&
+mysql -u root < database/create_db.sql &&
+echo "Populating Database..." &&
+mysql -u root < database/init_db.sql &&
+echo "Starting Flask application..." &&
+export FLASK_APP=app/app.py &&
+flask run

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="col-md-10 col-md-offset-1">
+    	<div class="row">
+    	  <h2>Current Users</h2>
+        {% if users %}
+  	    	<div class="col-12 outline-gray">
+  	    		<div class="row m-0 pb-1 underline">
+      				<div class="col-md-4">Email</div>
+      				<div class="col-md-2">First Name</div>
+      				<div class="col-md-2">Last Name</div>
+        			<div class="col-md-2">Role</div>
+        			<div class="col-md-1">Update</div>
+        			<div class="col-md-1">Delete</div>
+      			</div>
+  	    		{% for user in users %}
+                    <div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+                    <div class="col-md-4">{{ user['email'] }}</div>
+                    <div class="col-md-2">{{ user['fname'] }}</div>
+                    <div class="col-md-2">{{ user['lname'] }}</div>
+                    <form action ="/change_role/{{ user['userId'] }}"  method="POST">
+                        <div class="col-md-2">
+                            <select name="make1"
+                              class="form-control">
+
+                              <option value="admin"
+                                      {% if 'admin' == user.role %}
+                                      selected="selected"
+                                      {% endif %}>
+                                  Admin
+                              </option>
+                              <option value="faculty"
+                                      {% if 'faculty' == user.role %}
+                                      selected="selected"
+                                      {% endif %}>
+                                  Faculty
+                              </option>
+                              <option value="student"
+                                      {% if 'student' == user.role %}
+                                      selected="selected"
+                                      {% endif %}>
+                                  Student
+                              </option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 center">
+                            <a class="update">
+                                <span class="glyphicon glyphicon-ok navbar-link center"></span>
+                            </a>
+                        </div>
+                    </form>
+
+                    <form action ="/admin/{{ user['userId'] }}/{{ user['role'] }}"  method="POST">
+                        <div class="col-md-1 center">
+                            <a class="delete">
+                                <span class="glyphicon glyphicon-remove navbar-link center"></span>
+                            </a>
+                        </div>
+                    </form>
+
+                    </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          System does not have users yet !
+        {% endif %}
+      </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".update").click(function(){
+			$(this).closest('form').submit();
+		});
+		$(".delete").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}

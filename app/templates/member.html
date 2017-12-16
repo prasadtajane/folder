@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field_errors %}
+
+{% block content %}
+    <div>
+
+    </div>
+
+  <div class="col-md-10 col-md-offset-1">
+    	<div class="row">
+    	  <h2>Members</h2>
+  	    	<div class="col-12 outline-gray">
+  	    		<div class="row m-0 pb-1 underline">
+
+      				<div class="col-md-1">Member Id</div>
+      				<div class="col-md-1">First Name</div>
+      				<div class="col-md-1">Last Name</div>
+        			<div class="col-md-1">Marrital Status</div>
+        			<div class="col-md-1">Wheather Dependent</div>
+        			<div class="col-md-2">Home Phone Number</div>
+        			<div class="col-md-1">Group Id</div>
+        			<div class="col-md-1">Plan Id</div>
+        			<div class="col-md-1">Contact Id</div>
+        			<div class="col-md-1">Update</div>
+        			<div class="col-md-1">Delete</div>
+      			</div>
+
+                <div class="row m-0">
+                    <form action ="/insert"  method="POST">
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="member_id"
+                                   name="member_id">
+                        </div>
+                        <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="firstName"
+                                       name="firstName">
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="lastName"
+                                   name="lastName">
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="marital_status"
+                                   name="marital_status">
+
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="whether_dependent"
+                                   name="whether_dependent">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text"
+                                   class="form-control"
+                                   id="home_phone_number"
+                                   name="home_phone_number">
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="group_id"
+                                   name="group_id">
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="plan_id"
+                                   name="plan_id">
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text"
+                                   class="form-control"
+                                   id="contact_id"
+                                   name="contact_id">
+                        </div>
+
+                        <div class="center col-md-2">
+                                <a class="insert">
+                                    <span class="glyphicon glyphicon-ok navbar-link center"></span>
+                                </a>
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+                {% for user in users %}
+                    <div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+
+                        <form action ="/update/{{ user['member_id'] }}"  method="POST">
+
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="member_id"
+                                       name="member_id"
+                                       placeholder={{ user['member_id'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="firstName"
+                                       name="firstName"
+                                       placeholder={{ user['firstName'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="lastName"
+                                       name="lastName"
+                                       placeholder={{ user['lastName'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="marital_status"
+                                       name="marital_status"
+                                       placeholder={{ user['marital_status'] }}>
+
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="whether_dependent"
+                                       name="whether_dependent"
+                                       placeholder={{ user['whether_dependent'] }}>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text"
+                                       class="form-control"
+                                       id="home_phone_number"
+                                       name="home_phone_number"
+                                       placeholder={{ user['home_phone_number'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="group_id"
+                                       name="group_id"
+                                       placeholder={{ user['group_id'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="plan_id"
+                                       name="plan_id"
+                                       placeholder={{ user['plan_id'] }}>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text"
+                                       class="form-control"
+                                       id="contact_id"
+                                       name="contact_id"
+                                       placeholder={{ user['contact_id'] }}>
+                            </div>
+
+                                <div class="center col-md-1">
+                                    <a class="update">
+                                        <span class="glyphicon glyphicon-ok navbar-link center"></span>
+                                    </a>
+                                </div>
+                        </form>
+
+                        <form action ="/delete/{{ user['member_id'] }}"  method="POST">
+                            <div class="center col-md-1">
+                                <a class="delete danger">
+                                    <span class="glyphicon glyphicon-remove navbar-link center"
+                                    style="color:#ff211c">
+                                    </span>
+                                </a>
+                            </div>
+                        </form>
+
+                    </div>
+                {% endfor %}
+          </div>
+      </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+	<script type="text/javascript">
+		$(".insert").click(function(){
+			$(this).closest('form').submit();
+		});
+		$(".update").click(function(){
+			$(this).closest('form').submit();
+		});
+		$(".delete").click(function(){
+			$(this).closest('form').submit();
+		});
+	</script>
+{% endblock %}

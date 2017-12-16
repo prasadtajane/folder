@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Killing SQL Server..." &&
+mysql.server stop
